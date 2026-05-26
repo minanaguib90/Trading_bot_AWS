@@ -3,4 +3,4 @@ ccxt==4.1.13
 python-dotenv==1.0.0
 requests==2.31.0
 werkzeug==3.0.1
-gunicorn==21.2.0
+gunicorn==22.0.0
