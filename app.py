@@ -125,10 +125,10 @@ def webhook():
         })
 
     except Exception as e:
-        logger.error(f"Webhook processing error: {e}")
+        logger.exception("Webhook processing error")
         return jsonify({
             "status": "error",
-            "message": str(e)
+            "message": "An internal error occurred"
         }), 500
 
 @app.route('/account/<account_id>/status', methods=['GET'])
