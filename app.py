@@ -254,10 +254,11 @@ def list_accounts():
             "accounts": accounts_status
         })
     
-    except Exception as e:
+    except Exception:
+        logging.exception("Failed to list accounts")
         return jsonify({
             "status": "error",
-            "message": str(e)
+            "message": "An internal error has occurred."
         }), 500
 
 if __name__ == '__main__':
